@@ -4,12 +4,45 @@
   padding: 0;
   box-sizing: border-box;
 }
-h1,h2,h3{
+h1,h2,h3,h4{
   margin-bottom: 1rem;
+}
+ul {
+  list-style: none;
+}
+
+:root {
+  --primary: #333;
+  --primary-gray: #444;
+  --primary-hint: #555;
+  --logo: #f9ca24;
+  --bg: #eee;
+  --bg-img: #ddd;
+  --bg-white: white;
+}
+em {
+  color: var(--primary);
 }
 a{
   color:#333;
   text-decoration: none;
+}
+.bg-dark {
+  background: var(--primary);
+  color: var(--bg-white);
+}
+
+.fa-solid {
+  color: var(--logo);
+}
+
+.title {
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+strong {
+  color: var(--logo);
 } 
 body{
   font-family: 'Montserrat',sans-serif;
@@ -64,4 +97,100 @@ padding: 1rem;
 header ul li a:hover{
 color: #f9ca24;
 }
+.vp {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/frame.jpg) center center/cover;
+  height: 700px;
+}
+.vp-content {
+  max-width: 800px;
+  text-align: center;
+  color: white;
+}
+.vp-content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+}
 
+.vp-content p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 2rem;
+}
+/* offer */
+.offer {
+  padding: 10rem 1rem;
+}
+
+.container {
+  display: block;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.offer-list {
+  display: flex;
+  flex: row nowrap;
+}
+
+.offer-elem {
+  border: 1px solid var(--bg-img);
+  background: var(--bg-white);
+  margin: 1rem;
+  flex: 1;
+}
+
+.offer-elem-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.offer-elem-img:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translate(-4px);
+}
+
+.offer-elem-text {
+  padding: 2rem;
+  text-align: center;
+}
+.offer-separator {
+  margin: 1rem auto;
+  width: 50px;
+  height: 2px;
+  background: var(--primary);
+}
+/* who */
+
+.who {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.who-content-img {
+  flex: 1;
+}
+
+.who-content-img img {
+  width: 100%;
+}
+
+.who-content-text {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.who-content-text p {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
